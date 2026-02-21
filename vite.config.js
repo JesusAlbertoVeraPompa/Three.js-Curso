@@ -43,6 +43,25 @@ export default defineConfig({
                 Textures: resolve(__dirname, "src/pages/10.0-Textures.html"),
                 Materials: resolve(__dirname, "src/pages/11.0-Materials.html"),
                 TresDText: resolve(__dirname, "src/pages/12.0-3DText.html"),
+
+                BoxGeometry: resolve(__dirname, "src/pages/8.0.-Geometry/8.1.-BoxGeometry.html"),
+                CapsuleGeometry: resolve(
+                    __dirname,
+                    "src/pages/8.0.-Geometry/8.2.-CapsuleGeometry.html",
+                ),
+                CircleGeometry: resolve(
+                    __dirname,
+                    "src/pages/8.0.-Geometry/8.3.-CircleGeometry.html",
+                ),
+                ConeGeometry: resolve(__dirname, "src/pages/8.0.-Geometry/8.4.-ConeGeometry.html"),
+                CylinderGeometry: resolve(
+                    __dirname,
+                    "src/pages/8.0.-Geometry/8.5.-CylinderGeometry.html",
+                ),
+                DodecahedronGeometry: resolve(
+                    __dirname,
+                    "src/pages/8.0.-Geometry/8.6.-DodecahedronGeometry.html",
+                ),
             },
         },
     },
