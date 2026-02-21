@@ -32,14 +32,14 @@ const scene = new THREE.Scene();
 
 // Textures
 const textureLoader = new THREE.TextureLoader();
-const matcapTexture = textureLoader.load("/textures/matcaps/12.jpg");
+const matcapTexture = textureLoader.load("../../textures/matcaps/12.jpg");
 
 // 👉 Declarar fuera para usarlo en tick()
 let text = null;
 
 // Fonts-Object
 const fontLoader = new FontLoader();
-fontLoader.load("/fonts/AvantGarde_Md_BT_Medium.json", (font) => {
+fontLoader.load("../../fonts/AvantGarde_Md_BT_Medium.json", (font) => {
     const textGeometry = new TextGeometry("Hello Three.js", {
         font: font,
         size: 0.5,
