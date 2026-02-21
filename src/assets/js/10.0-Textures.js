@@ -62,8 +62,8 @@ const scene = new THREE.Scene();
 // Texturas
 const textureLoader = new THREE.TextureLoader()
 
-const doorColorTexture = textureLoader.load('/textures/door/color.jpg')
-const matcapTexture = textureLoader.load('/textures/matcaps/1.png')
+const doorColorTexture = textureLoader.load('../../textures/door/color.jpg')
+const matcapTexture = textureLoader.load('../../textures/matcaps/1.png')
 
 
 doorColorTexture.colorSpace = THREE.SRGBColorSpace
