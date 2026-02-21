@@ -5,7 +5,7 @@
 import * as THREE from "./build/three.module.js";
 import { OrbitControls } from "./controls/OrbitControls.js";
 import GUI from 'https://cdn.jsdelivr.net/npm/lil-gui@0.21/+esm';
-import { RGBELoader } from "../../three/examples/jsm/loaders/RGBELoader.js";
+import { RGBELoader } from "../../../public/three/examples/jsm/loaders/RGBELoader.js";
 
 // Debug
 const gui = new GUI();
