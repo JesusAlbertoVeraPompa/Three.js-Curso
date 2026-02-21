@@ -4,10 +4,252 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>three-js-curso</title>
+    <title>Three.js Curso</title>
+    <!-- Estilos -->
+        <link rel="stylesheet" href="./src/assets/css/main.css" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+  <body class="min-h-screen flex flex-col">
+        <!-- HEADER -->
+        <header class="w-full flex flex-row justify-around items-center p-2 bg-gray-800">
+            <div class="basis-1/3 flex justify-start"></div>
+            <div class="basis-1/3 flex justify-center">
+                <h2 class="text-[18px] font-bold text-white">Course Three.js</h2>
+            </div>
+            <div class="basis-1/3 flex justify-end items-end">
+                <a
+                    class="basis-1/3 flex justify-end items-end"
+                    href="https://github.com/JesusAlbertoVeraPompa/Three.js-Course"
+                    target="_blank"
+                >
+                    <h3 class="text-white mx-2">Repository</h3>
+                    <img
+                        class="w-18 rounded"
+                        src="./src/assets/img/1.logo-github.jpg"
+                        alt=""
+                        srcset=""
+                    />
+                </a>
+            </div>
+        </header>
+
+        <!-- MAIN -->
+        <main class="flex-1 p-2 lg:p-4">
+            <div class="bg-blue-300 p-2 lg:p-4 rounded-md">
+                <h3 class="font-bold text-xl">Section 1 - Basics</h3>
+                <div class="grid lg:grid-cols-2 gap-1 lg:gap-4 rounded-t-md bg-gray-300 p-1 lg:p-4">
+                    <div class="w-full text-center bg-gray-100 p-1 lg:p-4 rounded-md">
+                        <h4 class="font-semibold">1.0 What is WebGL?</h4>
+                        <p class="w-full text-[12px] break-words overflow-hidden">
+                            WebGL is a JavaScript API that renders triangles in a canvas at a
+                            remarkable speed. It's compatible with most modern browsers, and it's
+                            fast because it uses the Graphic Processing Unit (GPU) of the visitor.
+                            WebGL can draw more than triangles and can also be used to create 2D
+                            experiences, but we will focus on 3D experiences using triangles for the
+                            course's sake. The GPU can do thousands of parallel calculations.
+                            Imagine that you want to render a 3D model and this model is constituted
+                            of 1000 triangles—which, come to think about it, is not that many. Each
+                            triangle includes 3 points. When we want to render our model, the GPU
+                            will have to calculate the position of these 3000 points. Because the
+                            GPU can do parallel calculations, it will handle all the triangles
+                            points in one row. Once the model's points are well placed, the GPU
+                            needs to draw each visible pixel of those triangles. Yet again, the GPU
+                            will handle the thousands and thousands of pixels calculations in one
+                            go. The instructions to place the points and draw the pixels are written
+                            in what we call shaders. And let me tell you, shaders are hard to
+                            master. We also need to provide data to these shaders. For example: how
+                            to place the points according to the model transformations and the
+                            camera's properties. These are called matrices. We also need to provide
+                            data to help colorize the pixels. If there is a light and the triangle
+                            is facing that light, it should be brighter than if the triangle isn't.
+                            And this is why native WebGL is so hard. Drawing a single triangle on
+                            the canvas would take at least 100 lines of code. Good luck if you want
+                            to add perspective, lights, models, and animate everything in that case.
+                            But native WebGL benefits from existing at a low level, very close to
+                            the GPU. This enables excellent optimizations and more control.
+                        </p>
+                    </div>
+                    <div class="text-center bg-gray-100 p-1 lg:p-4 rounded-md">
+                        <h4 class="font-semibold">2.0 Three.js to the rescue</h4>
+                        <p class="w-full text-[12px] break-words overflow-hidden">
+                            Three.js is a JavaScript library under MIT license that works right
+                            above WebGL. The library's goal is to drastically simplify the process
+                            of handling all of what we just stated. You'll have an animated 3D scene
+                            in just a few code lines, and you won't have to provide shaders and
+                            matrices. Because Three.js is right above WebGL, we can still interact
+                            with it in some ways. At some point, we will get to writing shaders and
+                            create matrices. Ricardo Cabello, aka Mr.doob (Website, Twitter), is the
+                            developer who created Three.js. He is still working on it, but now he's
+                            helped by a large community. You can check the list of contributors
+                            here: https://github.com/mrdoob/three.js/graphs/contributors Currently,
+                            the library gets an update every month and you can see what's changed in
+                            the releases page here: https://github.com/mrdoob/three.js/releases You
+                            can discover many exceptional projects using Three.js on the website's
+                            homepage: https://threejs.org/ There is also some well-maintained
+                            documentation that we will use a lot:
+                            https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene
+                            And you can find hundreds of examples with public code here:
+                            https://threejs.org/examples/#webgl_tonemapping If you want to follow
+                            updates and discover exceptional projects, I advise you to follow the
+                            Mr.doob and Three.js twitter accounts: https://twitter.com/mrdoob
+                            https://twitter.com/threejs
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="grid grid-cols-2 lg:grid-cols-4 gap-1 lg:gap-4 w-full rounded-b-md justify-around bg-gray-300 p-1 lg:p-4"
+                >
+                    <a href="./src/pages/3.0-First-Project.html">
+                        <div class="text-center bg-gray-100 p-1 lg:p-4 rounded-md cursor-pointer">
+                            <img src="./src/assets/img/3.0-First-Project.png" alt="" />
+                            <h4 class="font-semibold">3.0 First Project</h4>
+                        </div>
+                    </a>
+                    <a href="./src/pages/4.0-Transform-Objects.html">
+                        <div class="text-center bg-gray-100 p-1 lg:p-4 rounded-md cursor-pointer">
+                            <img src="./src/assets/img/4.0-Transform-Objects.png" alt="" />
+                            <h4 class="font-semibold">4.0 Transform Objects</h4>
+                        </div>
+                    </a>
+                    <a href="./src/pages/4.1-Objects-Group.html">
+                        <div class="text-center bg-gray-100 p-1 lg:p-4 rounded-md cursor-pointer">
+                            <img src="./src/assets/img/4.1-Objects-Group.png" alt="" />
+                            <h4 class="font-semibold">4.1 Objects Group</h4>
+                        </div>
+                    </a>
+                    <a href="./src/pages/5.0.-Animations-Simple.html">
+                        <div class="text-center bg-gray-100 p-1 lg:p-4 rounded-md cursor-pointer">
+                            <img src="./src/assets/img/5.0.-Animations-Simple.png" alt="" />
+                            <h4 class="font-semibold">5.0 Animations Simple</h4>
+                        </div>
+                    </a>
+                    <a href="./src/pages/5.1.-Animations-Compound.html">
+                        <div class="text-center bg-gray-100 p-1 lg:p-4 rounded-md cursor-pointer">
+                            <img src="./src/assets/img/5.1.-Animations-Compound.png" alt="" />
+                            <h4 class="font-semibold">5.1 Animations Compound</h4>
+                        </div>
+                    </a>
+                    <a href="./src/pages/5.2.-Animations-Library.html">
+                        <div class="text-center bg-gray-100 p-1 lg:p-4 rounded-md cursor-pointer">
+                            <img src="./src/assets/img/5.2.-Animations-Library.png" alt="" />
+                            <h4 class="font-semibold">5.2 Animations Library</h4>
+                        </div>
+                    </a>
+                    <a href="./src/pages/6.1.-Camera-Perspective.html">
+                        <div class="text-center bg-gray-100 p-1 lg:p-4 rounded-md cursor-pointer">
+                            <img src="./src/assets/img/6.1.-Camera-Perspective.png" alt="" />
+                            <h4 class="font-semibold">6.1 Camera Perspective</h4>
+                        </div>
+                    </a>
+                    <a href="./src/pages/6.2.-Camera-Orthographic.html">
+                        <div class="text-center bg-gray-100 p-1 lg:p-4 rounded-md cursor-pointer">
+                            <img src="./src/assets/img/6.2.-Camera-Orthographic.png" alt="" />
+                            <h4 class="font-semibold">6.2 Camera Orthographic</h4>
+                        </div>
+                    </a>
+                    <a href="./src/pages/6.3.-Camera-Perspective-Controls.html">
+                        <div class="text-center bg-gray-100 p-1 lg:p-4 rounded-md cursor-pointer">
+                            <img src="./src/assets/img/6.3.-Camera-Perspective-Controls.png" alt="" />
+                            <h4 class="font-semibold">6.3 Camera Perspective Controls</h4>
+                        </div>
+                    </a>
+                    <a href="./src/pages/6.4.-Camera-Perspective-Orbit-Controls.html">
+                        <div class="text-center bg-gray-100 p-1 lg:p-4 rounded-md cursor-pointer">
+                            <img
+                                src="./src/assets/img/6.4.-Camera-Perspective-Orbit-Controls.png"
+                                alt=""
+                            />
+                            <h4 class="font-semibold">6.4 Camera Perspective Orbit Controls</h4>
+                        </div>
+                    </a>
+                    <a href="./src/pages/7.0.-Fullscreen-and-Responsive-Resign.html">
+                        <div class="text-center bg-gray-100 p-1 lg:p-4 rounded-md cursor-pointer">
+                            <img src="./src/assets/img/3.0-First-Project.png" alt="" />
+                            <h4 class="font-semibold">7.0 Fullscreen and Responsive Resign</h4>
+                        </div>
+                    </a>
+                    <a href="./src/pages/8.0.-Geometry.html">
+                        <div class="text-center bg-gray-100 p-1 lg:p-4 rounded-md cursor-pointer">
+                            <img src="./src/assets/img/8.0.-Geometry.png" alt="" />
+                            <h4 class="font-semibold">8.0 Geometry</h4>
+                        </div>
+                    </a>
+                    <a href="./src/pages/8.1.-Geometry-Float32Array.html">
+                        <div class="text-center bg-gray-100 p-1 lg:p-4 rounded-md cursor-pointer">
+                            <img src="./src/assets/img/8.1.-Geometry-Float32Array.png" alt="" />
+                            <h4 class="font-semibold">8.1 Geometry Float32Array</h4>
+                        </div>
+                    </a>
+                    <a href="./src/pages/8.2.-Geometry-Float32Array-Random.html">
+                        <div class="text-center bg-gray-100 p-1 lg:p-4 rounded-md cursor-pointer">
+                            <img src="./src/assets/img/8.2.-Geometry-Float32Array-Random.png" alt="" />
+                            <h4 class="font-semibold">8.2 Geometry Float32Array Random</h4>
+                        </div>
+                    </a>
+                    <a href="./src/pages/9.0.-Debug-UI.html">
+                        <div class="text-center bg-gray-100 p-1 lg:p-4 rounded-md cursor-pointer">
+                            <img src="./src/assets/img/9.0.-Debug-UI.png" alt="" />
+                            <h4 class="font-semibold">9.0 Debug UI</h4>
+                        </div>
+                    </a>
+                    <a href="./src/pages/10.0-Textures.html">
+                        <div class="text-center bg-gray-100 p-1 lg:p-4 rounded-md cursor-pointer">
+                            <img src="./src/assets/img/10.0-Textures.png" alt="" />
+                            <h4 class="font-semibold">10.0 Textures</h4>
+                        </div>
+                    </a>
+                    <a href="./src/pages/11.0-Materials.html">
+                        <div class="text-center bg-gray-100 p-1 lg:p-4 rounded-md cursor-pointer">
+                            <img src="./src/assets/img/11.0-Materials.png" alt="" />
+                            <h4 class="font-semibold">11.0 Materials</h4>
+                        </div>
+                    </a>
+                    <a href="./src/pages/12.0-3DText.html">
+                        <div class="text-center bg-gray-100 p-1 lg:p-4 rounded-md cursor-pointer">
+                            <img src="./src/assets/img/12.0-3DText.png" alt="" />
+                            <h4 class="font-semibold">12.0 3DText</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- Section 2 - Classic Technoqies -->
+            <div class="bg-green-300 p-2 lg:p-4 rounded-md">
+                <h3 class="font-bold text-xl">Section 2 - Classic Technoqies</h3>
+
+                <div
+                    class="grid grid-cols-2 lg:grid-cols-4 gap-1 lg:gap-4 w-full rounded-b-md justify-around bg-gray-300 p-1 lg:p-4"
+                >
+                    <a href="./src/pages/3.0-First-Project.html">
+                        <div class="text-center bg-gray-100 p-1 lg:p-4 rounded-md cursor-pointer">
+                            <img src="./src/assets/img/3.0-First-Project.png" alt="" />
+                            <h4 class="font-semibold">3.0 First Project</h4>
+                        </div>
+                    </a>
+                    <a href="./src/pages/4.0-Transform-Objects.html">
+                        <div class="text-center bg-gray-100 p-1 lg:p-4 rounded-md cursor-pointer">
+                            <img src="./src/assets/img/4.0-Transform-Objects.png" alt="" />
+                            <h4 class="font-semibold">4.0 Transform Objects</h4>
+                        </div>
+                    </a>
+                    <a href="./src/pages/4.1-Objects-Group.html">
+                        <div class="text-center bg-gray-100 p-1 lg:p-4 rounded-md cursor-pointer">
+                            <img src="./src/assets/img/4.1-Objects-Group.png" alt="" />
+                            <h4 class="font-semibold">4.1 Objects Group</h4>
+                        </div>
+                    </a>
+                    <a href="./src/pages/5.0.-Animations-Simple.html">
+                        <div class="text-center bg-gray-100 p-1 lg:p-4 rounded-md cursor-pointer">
+                            <img src="./src/assets/img/5.0.-Animations-Simple.png" alt="" />
+                            <h4 class="font-semibold">5.0 Animations Simple</h4>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="bg-gray-800 text-white text-center p-3">Course Three.js</footer>
+    </body>
 </html>
