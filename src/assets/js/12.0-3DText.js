@@ -4,8 +4,8 @@
 
 import * as THREE from "./build/three.module.js";
 import { OrbitControls } from "./controls/OrbitControls.js";
-import { FontLoader } from "../../../public/three/examples/jsm/loaders/FontLoader.js";
-import { TextGeometry } from "../../../public/three/examples/jsm/geometries/TextGeometry.js";
+import { FontLoader } from "./three/examples/jsm/loaders/FontLoader.js";
+import { TextGeometry } from "./three/examples/jsm/geometries/TextGeometry.js";
 
 // Canvas
 const canvas = document.querySelector("canvas.webgl");
