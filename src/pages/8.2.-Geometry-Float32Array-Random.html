@@ -1,91 +1,79 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>8.2 Geometry Float32Array Random - Curso Three.js</title>
+        <title>8.2 Geometry Float32Array Random - Curso Three.js</title>
 
-    <!-- Estilos -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script type="module" crossorigin src="/Three.js-Curso/assets/GeometryFloat32ArrayRandom-Bi2cNumV.js"></script>
-    <link rel="modulepreload" crossorigin href="/Three.js-Curso/assets/modulepreload-polyfill-DS6cw923.js">
-    <link rel="modulepreload" crossorigin href="/Three.js-Curso/assets/OrbitControls-BBQBE4t1.js">
-    <link rel="stylesheet" crossorigin href="/Three.js-Curso/assets/main-x1XGuNl0.css">
-  </head>
+        <!-- Estilos -->
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      <script type="module" crossorigin src="/Three.js-Curso/assets/GeometryFloat32ArrayRandom-Bi2cNumV.js"></script>
+      <link rel="modulepreload" crossorigin href="/Three.js-Curso/assets/modulepreload-polyfill-DS6cw923.js">
+      <link rel="modulepreload" crossorigin href="/Three.js-Curso/assets/OrbitControls-BBQBE4t1.js">
+      <link rel="stylesheet" crossorigin href="/Three.js-Curso/assets/main-x1XGuNl0.css">
+    </head>
 
-  <body class="min-h-screen flex flex-col bg-gray-300">
-    <!-- HEADER -->
-    <header
-      class="w-full flex flex-row justify-around items-center p-2 bg-gray-800"
-    >
-      <div class="basis-1/3 flex justify-start">
-        <a class="basis-1/3 flex justify-start" href="../index.html">
-          <button
-            class="bg-blue-500 px-3 py-1 rounded-md text-white cursor-pointer"
-          >
-            Regresar
-          </button>
-        </a>
-      </div>
-      <div class="basis-1/3 flex justify-center">
-        <h2 class="text-[18px] font-bold text-white">Course Three.js</h2>
-      </div>
-      <div class="basis-1/3 flex justify-end items-end">
-        <a
-          class="basis-1/3 flex justify-end items-end"
-          href="https://github.com/JesusAlbertoVeraPompa/Three.js-Course"
-          target="_blank"
-        >
-          <h3 class="text-white mx-2">Repository</h3>
-          <img
-            class="w-18 rounded"
-            src="/Three.js-Curso/assets/1.logo-github-DwURVCs5.jpg"
-            alt=""
-            srcset=""
-          />
-        </a>
-      </div>
-    </header>
+    <body class="min-h-screen flex flex-col bg-gray-300">
+        <!-- HEADER -->
+        <header class="w-full flex flex-row justify-around items-center p-2 bg-gray-800">
+            <div class="basis-1/3 flex justify-start">
+                <a class="basis-1/3 flex justify-start" href="../../index.html">
+                    <button class="bg-blue-500 px-3 py-1 rounded-md text-white cursor-pointer">
+                        Regresar
+                    </button>
+                </a>
+            </div>
+            <div class="basis-1/3 flex justify-center">
+                <h2 class="text-[18px] font-bold text-white">Course Three.js</h2>
+            </div>
+            <div class="basis-1/3 flex justify-end items-end">
+                <a
+                    class="basis-1/3 flex justify-end items-end"
+                    href="https://github.com/JesusAlbertoVeraPompa/Three.js-Course"
+                    target="_blank"
+                >
+                    <h3 class="text-white mx-2">Repository</h3>
+                    <img
+                        class="w-18 rounded"
+                        src="/Three.js-Curso/assets/1.logo-github-DwURVCs5.jpg"
+                        alt=""
+                        srcset=""
+                    />
+                </a>
+            </div>
+        </header>
 
-    <!-- MAIN -->
-    <main class="flex-1 p-2 lg:p-4">
-      <div class="w-full bg-gray-100 rounded-md p-2 lg:p-4 space-y-4">
-        <!-- CANVAS -->
-        <div
-          class="flex justify-center items-center h-[500px] bg-gray-300 rounded-md p-2"
-        >
-          <canvas class="webgl bg-gray-100 rounded-md"></canvas>
-        </div>
+        <!-- MAIN -->
+        <main class="flex-1 p-2 lg:p-4">
+            <div class="w-full bg-gray-100 rounded-md p-2 lg:p-4 space-y-4">
+                <!-- CANVAS -->
+                <div class="flex justify-center items-center h-[500px] bg-gray-300 rounded-md p-2">
+                    <canvas class="webgl bg-gray-100 rounded-md"></canvas>
+                </div>
 
-        <!-- TITLE -->
-        <h3
-          class="text-center bg-gray-300 p-2 rounded-md font-semibold text-[24px]"
-        >
-          8.2 Geometry Float32Array Random
-        </h3>
+                <!-- TITLE -->
+                <h3 class="text-center bg-gray-300 p-2 rounded-md font-semibold text-[24px]">
+                    8.2 Geometry Float32Array Random
+                </h3>
 
-        <!-- CODE VIEW -->
-        <div class="bg-gray-300 rounded-md p-2">
-          <pre
-            class="bg-gray-900 text-gray-100 p-4 rounded-md overflow-x-auto text-sm"
-          >
+                <!-- CODE VIEW -->
+                <div class="bg-gray-300 rounded-md p-2">
+                    <pre class="bg-gray-900 text-gray-100 p-4 rounded-md overflow-x-auto text-sm">
                         <code id="codigo-js"></code>
                     </pre>
-        </div>
-      </div>
-    </main>
+                </div>
+            </div>
+        </main>
 
-    <!-- FOOTER -->
-    <footer class="bg-gray-800 text-white text-center p-3">
-      Curso Three.js
-    </footer>
+        <!-- FOOTER -->
+        <footer class="bg-gray-800 text-white text-center p-3">Curso Three.js</footer>
 
-    <!-- THREE.JS (SE EJECUTA) -->
+        <!-- THREE.JS (SE EJECUTA) -->
 
-    <!-- MOSTRAR CÓDIGO (NO SE EJECUTA) -->
-    <script>
-      const codigo = `
+        <!-- MOSTRAR CÓDIGO (NO SE EJECUTA) -->
+        <script>
+            const codigo = `
 //==============================================================================
 // assets/js/8.2.-Geometry-Float32Array-Random.js
 //==============================================================================
@@ -177,7 +165,7 @@ animate();
 
         `;
 
-      document.getElementById("codigo-js").textContent = codigo;
-    </script>
-  </body>
+            document.getElementById("codigo-js").textContent = codigo;
+        </script>
+    </body>
 </html>
